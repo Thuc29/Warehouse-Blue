@@ -1,0 +1,84 @@
+/* Container setup */
+.hero-container {
+     margin-bottom: 10%;
+     padding: 60px 20px;
+     position: relative;
+     height: 70vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.hero-title {
+     font-size: 4.5rem;
+     font-weight: 1200;
+     line-height: 1;
+     font-weight: 700;
+}
+
+/* Flex layout for text and image */
+.hero-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+}
+
+.hero-text {
+     margin-right: 40%;
+}
+
+.img {
+     width: 700px;
+     margin-left: -34%;
+     /* margin-right: 50%; */
+}
+
+@media (min-width: 1200px) {
+     .hero-content {
+          text-align: left;
+     }
+}
+
+.highlight {
+     color: #8fd5fd;
+     /* Custom color for the highlighted word */
+}
+
+.hero-description {
+     font-size: 1rem;
+     color: #555;
+     width: 63%;
+     margin-bottom: 30px;
+}
+
+.hero-content .bton {
+     background-color: #8932f4;
+     color: rgb(255, 255, 255);
+     border: none;
+     padding: 10px 20px;
+     font-size: 1.1rem;
+     transition: background-color 0.3s ease;
+     border-radius: 25px;
+}
+
+.hero-content .bton:hover {
+     background-color: #ffffff;
+     border: 1px solid black;
+}
+
+/* Image Section */
+.hero-image {
+     position: relative;
+     bottom: 0;
+     right: 0;
+     max-width: 400px;
+}
+
+
+@media (min-width: 1200px) {
+     .hero-image {
+          position: absolute;
+          max-width: 450px;
+     }
+}

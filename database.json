@@ -1,0 +1,75 @@
+{
+     "posts": [
+       {
+         "id": "1",
+         "title": "First Post",
+         "description": "This is a description of the first post.",
+         "tags": ["Html", "CSS", "JavaScript"]
+       },
+       {
+         "id": "2",
+         "title": "Second Post",
+         "description": "This is a description of the second post.",
+         "tags": ["React", "Node.js"]
+       }
+     ],
+     "galleries": [
+       {
+         "id": "1",
+         "imageUrl": "https://example.com/image1.jpg",
+         "description": "Gallery image 1"
+       },
+       {
+         "id": "2",
+         "imageUrl": "https://example.com/image2.jpg",
+         "description": "Gallery image 2"
+       }
+     ],
+     "createPost": {
+       "title": "New Post Title",
+       "description": "Description for the new post.",
+       "tags": ["Html", "CSS"]
+     },
+     "login": [
+       {
+         "username": "admin",
+         "accessToken": "1234567890",
+         "refreshToken": "0987654321"
+       },
+       {
+         "username": "admin1",
+         "accessToken": "2345678901",
+         "refreshToken": "1098765432"
+       },
+       {
+         "username": "admin2",
+         "accessToken": "3456789012",
+         "refreshToken": "2109876543"
+       },
+       {
+         "username": "admin3",
+         "accessToken": "4567890123",
+         "refreshToken": "3121098765"
+       }
+     ],
+     "refreshTokens": [
+       {
+         "refreshToken": "0987654321"
+       },
+       {
+         "refreshToken": "1098765432"
+       },
+       {
+         "refreshToken": "2109876543"
+       },
+       {
+         "refreshToken": "3121098765"
+       }
+     ],
+     "meta": {
+       "current_page": 1,
+       "total_page": 1,
+       "page_size": 2,
+       "total": 2
+     }
+   }

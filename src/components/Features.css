@@ -1,0 +1,49 @@
+.feature-card {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     max-width: 530px;
+     height: 358px;
+     margin: 0 auto;
+}
+
+.feature-card .background-image {
+     position: absolute;
+     top: 0;
+     z-index: -1;
+}
+
+.feature-card .image-container img {
+     max-width: 120px;
+     margin-right: 1.5rem;
+}
+
+.feature-card .content-container h3 {
+     margin-bottom: 1rem;
+}
+
+.feature-card .content-container p {
+     font-style: italic;
+     font-weight: 300;
+     margin-bottom: 1rem;
+}
+
+.feature-card .learn-more {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     font-weight: bold;
+     color: #007bff;
+}
+
+.feature-card .learn-more .icon {
+     font-size: 1.25rem;
+     color: #6c757d;
+     transition: margin-left 0.3s ease;
+}
+
+.feature-card .learn-more:hover .icon {
+     margin-left: 5px;
+}
