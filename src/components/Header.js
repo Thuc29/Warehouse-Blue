@@ -3,19 +3,19 @@ import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa'; 
 import 'aos/dist/aos.css'; 
 import AOS from 'aos'; 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const navigate = useNavigate(); // To navigate on logout
-  
+
   React.useEffect(() => {
     AOS.init(); 
   }, []);
+  const user = localStorage.getItem('loggedInUser ') ? JSON.parse(localStorage.getItem('loggedInUser ')) : null;
 
   const handleLogout = () => {
-    setIsLoggedIn(false); // Set logged in to false on logout
-    navigate('/'); // Redirect to home or login page after logout
+    localStorage.removeItem('loggedInUser ');
+    navigate('/'); 
   };
 
   return (
@@ -26,7 +26,7 @@ const Header = () => {
             <img src="logo.png" alt="Logo" />
           </Navbar.Brand>
           <div className="d-xs-block d-lg-none mx-auto-btn">
-            {!isLoggedIn ? (
+            {!user ? (
               <Button 
                 variant="" 
                 className="request-demo-btn px-4 fw-bold" 
@@ -83,12 +83,12 @@ const Header = () => {
                   }}
                   onClick={handleLogout}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#A254FF';
+                    e.currentTarget.style.backgroundColor = '#5B5B5B';
                     e.currentTarget.style.color = 'white'; 
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'white'; 
-                    e.currentTarget.style.color = '#5B5B5B'; 
+                    e.currentTarget.style.color = '#A254FF'; 
                   }}
                 >
                   Logout
@@ -136,7 +136,7 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
         <div className="d-none d-lg-block">
-          {!isLoggedIn ? (
+          {!user ? (
             <Button 
               variant="light" 
               className="request-demo-btn ml-auto fw-bold px-4" 
@@ -191,12 +191,12 @@ const Header = () => {
                 }}
                 onClick={handleLogout}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#A254FF';
+                  e.currentTarget.style.backgroundColor = '#5B5B5B';
                   e.currentTarget.style.color = 'white'; 
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'white'; 
-                  e.currentTarget.style.color = '#5B5B5B'; 
+                  e.currentTarget.style.color = '#A254FF'; 
                 }}
               >
                 Logout
